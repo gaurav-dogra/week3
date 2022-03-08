@@ -38,7 +38,7 @@ public class Tests
         const int PASSENGER_CAPACITY = 5;
         var vehicle = new Vehicle(PASSENGER_CAPACITY);
 
-        Assert.That(() => vehicle.SetNumPassengers(6), Throws.TypeOf<PassengersExceedCapacityException>()
+        Assert.That(() => vehicle.NumPassengers = 6, Throws.TypeOf<PassengersExceedCapacityException>()
         .With.Message
         .Contain("Passenger number exceed the capacity"));
     }
@@ -49,7 +49,7 @@ public class Tests
         const int PASSENGERS_NUMBER = -1;
         var vehicle = new Vehicle();
 
-        Assert.That(() => vehicle.SetNumPassengers(PASSENGERS_NUMBER),
+        Assert.That(() => vehicle.NumPassengers = PASSENGERS_NUMBER,
             Throws.TypeOf<IncorrectPassengerNumberException>()
         .With.Message
         .Contain("Passenger number can not be negative"));
