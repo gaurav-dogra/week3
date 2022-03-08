@@ -24,6 +24,7 @@ public class Airplane : Vehicle
         Altitude -= distance;
     }
 
+<<<<<<< HEAD
     public override string ToString()
     { 
 
@@ -38,5 +39,16 @@ public class Airplane : Vehicle
     public override string Move()
     {
         return base.Move() + $" at an altitude of {Altitude} meters.";
+=======
+    public string ToString()
+    { 
+
+        return $"Thank you for flying JetsRUs: {base.ToString()} altitude: 500.";
+>>>>>>> 9c368afadf596c693c292702222d31bb082eeee5
+    }
+
+    public override string Move(int times)
+    {
+        return base.Move(3) + $" at an altitude of {Altitude} meters.";
     }
 }
