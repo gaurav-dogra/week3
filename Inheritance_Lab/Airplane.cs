@@ -25,7 +25,18 @@ public class Airplane : Vehicle
     }
 
     public string ToString()
-    {
+    { 
+
         return $"Thank you for flying JetsRUs: {base.ToString()} altitude: 500.";
+    }
+
+    public override string Move(int times)
+    {
+        return base.Move(times) + $" at an altitude of {Altitude} meters.";
+    }
+
+    public override string Move()
+    {
+        return base.Move() + $" at an altitude of {Altitude} meters.";
     }
 }

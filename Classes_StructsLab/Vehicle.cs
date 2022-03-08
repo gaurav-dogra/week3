@@ -42,13 +42,13 @@ public class Vehicle
         Position = position;
     }
 
-    public string Move()
+    public virtual string Move()
     {
         SetPosition(Position + Speed);
         return "Moving along";
     }
 
-    public string Move(int times)
+    public virtual string Move(int times)
     {
         SetPosition(Position + times * Speed);
         return $"Moving along {times} times";
