@@ -60,4 +60,9 @@ public class Vehicle
         return $"{objectToString} capacity: {_capacity} passengers: {NumPassengers} " +
             $"speed: {Speed} position: {Position}";
     }
+
+    static void Main(string[] args)
+    {
+
+    }
 }

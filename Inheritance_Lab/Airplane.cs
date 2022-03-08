@@ -24,10 +24,10 @@ public class Airplane : Vehicle
         Altitude -= distance;
     }
 
-    public string ToString()
+    public override string ToString()
     { 
 
-        return $"Thank you for flying JetsRUs: {base.ToString()} altitude: 500.";
+        return $"Thank you for flying {_airline}: {base.ToString()} altitude: {Altitude}.";
     }
 
     public override string Move(int times)
