@@ -48,7 +48,7 @@ public class Vehicle
         return "Moving along";
     }
 
-    public string Move(int times)
+    public virtual string Move(int times)
     {
         SetPosition(Position + times * Speed);
         return $"Moving along {times} times";
