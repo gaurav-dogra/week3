@@ -6,7 +6,7 @@ public class Vehicle
     private int _numPassengers;
     private const int DEFAULT_SPEED = 10;
 
-    // when we can have Property; is there a use case for prived fields
+    // when we can have Property; is there a use case for private fields
 
     public int Position { get; private set; }
     public int Speed { get; init; }
@@ -56,7 +56,8 @@ public class Vehicle
 
     public override string ToString()
     {
-        return $"{base.ToString()} capacity: {_capacity} passengers: {NumPassengers} " +
+        string objectToString = base.ToString();
+        return $"{objectToString} capacity: {_capacity} passengers: {NumPassengers} " +
             $"speed: {Speed} position: {Position}";
     }
 }

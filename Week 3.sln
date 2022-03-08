@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafariParkApp_Test", "Safar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_Lab", "Inheritance_Lab\Inheritance_Lab.csproj", "{2E36E7E1-7F7E-4225-8003-275C31436300}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_LabTests", "Inheritance_LabTests\Inheritance_LabTests.csproj", "{97962594-72F3-4FEA-8BC7-5955EE74C483}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2E36E7E1-7F7E-4225-8003-275C31436300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E36E7E1-7F7E-4225-8003-275C31436300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E36E7E1-7F7E-4225-8003-275C31436300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
