@@ -54,4 +54,14 @@ public class Tests
         .With.Message
         .Contain("Passenger number can not be negative"));
     }
+
+    [Test]
+    public void ToString_Test()
+    {
+        Vehicle vehicle = new Vehicle(200) { Speed = 100 };
+        vehicle.Move(3);
+        vehicle.NumPassengers = 150;
+        string expected = "Week3.Vehicle capacity: 200 passengers: 150 speed: 100 position: 300";
+        Assert.That(vehicle.ToString(), Is.EqualTo(expected));
+    }
 }

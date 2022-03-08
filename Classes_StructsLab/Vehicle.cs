@@ -53,4 +53,10 @@ public class Vehicle
         SetPosition(Position + times * Speed);
         return $"Moving along {times} times";
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()} capacity: {_capacity} passengers: {NumPassengers} " +
+            $"speed: {Speed} position: {Position}";
+    }
 }
