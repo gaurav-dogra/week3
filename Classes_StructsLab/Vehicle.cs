@@ -2,14 +2,18 @@
 
 public class Vehicle
 {
-    private int _capacity; // when we can have Property; is there a use case for prived fields
+    private int _capacity;
+    private int _numPassengers;
+    private const int DEFAULT_SPEED = 10;
+
+    // when we can have Property; is there a use case for prived fields
     //private int _numPassengers; // having property and field both in the given diagram?
+
     public int Position { get; private set; }
     public int Speed { get; init; }
     
-    public int NumPassengers { get; private set; }
+    public int NumPassengers { get; }
 
-    const int DEFAULT_SPEED = 10;
     public Vehicle() 
     {
         Speed = DEFAULT_SPEED;
@@ -21,7 +25,7 @@ public class Vehicle
         Speed = speed;
     }
 
-    private void setPosition(int position)
+    private void SetPosition(int position)
     {
         Position = position;
     }
@@ -32,18 +36,18 @@ public class Vehicle
             throw new IncorrectPassengerNumberException("Passenger number can not be negative");
         if (numPassengers > _capacity)
             throw new PassengersExceedCapacityException("Passenger number exceed the capacity");
-        NumPassengers = numPassengers;
+        _numPassengers = numPassengers;
     }
 
     public string Move()
     {
-        setPosition(Position + Speed);
+        SetPosition(Position + Speed);
         return "Moving along";
     }
 
     public string Move(int times)
     {
-        setPosition(Position + times * Speed);
+        SetPosition(Position + times * Speed);
         return $"Moving along {times} times";
     }
 }
