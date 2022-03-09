@@ -3,7 +3,7 @@ namespace Week3;
 
 public class Airplane : Vehicle
 {
-    private string _airline;
+    private readonly string _airline;
 
     public int Altitude { get; private set; }
 
@@ -18,7 +18,6 @@ public class Airplane : Vehicle
     {
         Altitude += distance;
     }
-    
     public void Descend(int distance)
     {
         Altitude -= distance;

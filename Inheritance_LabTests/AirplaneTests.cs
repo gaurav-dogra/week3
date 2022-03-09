@@ -9,7 +9,7 @@ public class AirplaneTests
     {
         const string expected = "Thank you for flying JetsRUs: Week3.Airplane " +
             "capacity: 200 passengers: 150 speed: 100 position: 500 altitude: 500.";
-        Airplane airplane = new Airplane(200) { Speed = 100 };
+        Airplane airplane = new Airplane(200, 100, "JetsRUs") { Speed = 100 };
         airplane.NumPassengers = 150;
         airplane.Move(5);
         airplane.Ascend(500);
@@ -17,11 +17,7 @@ public class AirplaneTests
     }
     
     [Test]
-<<<<<<< HEAD
     public void MoveWithInput_Test()
-=======
-    public void MoveTest()
->>>>>>> 9c368afadf596c693c292702222d31bb082eeee5
     {
         const string expected = "Moving along 3 times at an altitude of 500 meters.";
         Airplane airplane = new Airplane(200) { Speed = 100 };
@@ -30,7 +26,6 @@ public class AirplaneTests
         Assert.That(actual, Is.EqualTo(expected));
     }
 
-<<<<<<< HEAD
     [Test]
     public void Move_Test()
     {
@@ -40,7 +35,4 @@ public class AirplaneTests
         string actual = airplane.Move();
         Assert.That(actual, Is.EqualTo(expected));
     }
-=======
->>>>>>> 9c368afadf596c693c292702222d31bb082eeee5
-
 }

@@ -2,7 +2,7 @@
 
 public class Vehicle
 {
-    private int _capacity;
+    private readonly int _capacity;
     private int _numPassengers;
     private const int DEFAULT_SPEED = 10;
 
@@ -26,7 +26,7 @@ public class Vehicle
         }
     }
 
-    public Vehicle() 
+    public Vehicle()
     {
         Speed = DEFAULT_SPEED;
     }
@@ -63,6 +63,5 @@ public class Vehicle
 
     static void Main(string[] args)
     {
-
     }
 }
