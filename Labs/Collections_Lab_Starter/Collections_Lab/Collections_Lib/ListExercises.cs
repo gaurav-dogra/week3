@@ -9,13 +9,26 @@ namespace Collections_Lib
         // that are multiples of 5
         public static List<int> MakeFiveList(int max)
         {
-            throw new NotImplementedException();
+            List<int> myList = new List<int>();
+
+            for (int i = 5; i <= max; i += 5)
+            {
+                myList.Add(i);
+            }
+            return myList;
         }
 
         // returns a list of all the strings in sourceList that start with the letter 'A' or 'a'
         public static List<string> MakeAList(List<string> sourceList)
         {
-            throw new NotImplementedException();
+            List<string> myList = new List<string>();
+
+            foreach (string str in sourceList)
+            {
+                if (str.StartsWith('a') || str.StartsWith('A'))
+                    myList.Add(str);
+            }
+            return myList;
         }
     }
 }
