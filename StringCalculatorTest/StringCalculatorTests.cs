@@ -19,6 +19,7 @@ public class StringCalculatorTests
     [TestCase("1001 , 2 ", 2)]
     [TestCase("//[***]\n1***2***3", 6)]
     [TestCase("//[-----]\n1-----2-----3", 6)]
+    [TestCase("//[***][%%][----]\n1***2%%3----4", 10)]
     public void ShouldReturn_CorrectTotal(string input, int expectedResult)
     {
         Assert.That(StringCalculator.Calculate(input), Is.EqualTo(expectedResult));

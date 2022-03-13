@@ -1,37 +1,61 @@
 ﻿using System;
+using System.Text.RegularExpressions;
+
 namespace Week3;
 
 public class StringCalculator
 {
     static void Main()
     {
-        Console.WriteLine(Calculate("Test string"));
     }
 
-    public static int Calculate(string str)
+    public static int Calculate(string input)
     {
-        if (String.IsNullOrEmpty(str.Trim()))
+        input = input.Trim();
+        if (String.IsNullOrEmpty(input))
             return 0;
 
-        char[] delimeters = new char[2] {'\n', ','};
+        HashSet<char> delimeters = new();
 
-        if (str.StartsWith("//["))
+        if (input.StartsWith("//["))
         {
-            string fullDelimeter = str.Substring(3, str.IndexOf("]") - 3);
-            delimeters[1] = fullDelimeter[0];
-            str = str[(str.IndexOf('\n') + 1)..];
-            // assuming delimeter is a string of identical characaters
-            str = str.Replace(fullDelimeter, fullDelimeter[0].ToString());
+            List<string> fullDelimeters = GetDelimeters(input);
+            input = input[(input.IndexOf('\n') + 1)..];
+            foreach (string s in fullDelimeters)
+            {
+                input = input.Replace(s, s[0].ToString());
+                delimeters.Add(s[0]);
+            }
         }
-        else if (str.StartsWith("//"))
+        else if (input.StartsWith("//"))
         {
-            delimeters[1] = str[2];
-            str = str[(str.IndexOf('\n') + 1)..];
+            delimeters = new() { '\n', input[2] };
+            input = input[(input.IndexOf('\n') + 1)..];
+        } 
+        else
+        {
+            delimeters.Add(',');
+            delimeters.Add('\n');
         }
 
-        string[] strSplitInArray = str.Split(delimeters);
+        string[] strSplitInArray = input.Split(delimeters.ToArray());
 
         return AddElements(strSplitInArray);
+    }
+
+    private static List<string> GetDelimeters(string str)
+    {
+        List<string> delimeters = new();
+        string pattern = "\\[(.+?)\\]";
+        Regex regex = new(pattern);
+        Match match = regex.Match(str);
+        while (match.Success)
+        {
+            Group group = match.Groups[1];
+            delimeters.Add(group.Value);
+            match = match.NextMatch();
+        }
+        return delimeters;
     }
 
     private static int AddElements(string[] strSplitInArray)
@@ -44,7 +68,7 @@ public class StringCalculator
             bool isSucces = int.TryParse(s, out int number);
             if (number < 0 && isSucces)
                 negativeNumbers.Add(number);
-            else if (number <= 1000) 
+            else if (number <= 1000)
                 sum += isSucces ? number : throw new ArgumentException("Input does not meet the specification");
         }
 
