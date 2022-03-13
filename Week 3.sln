@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Lab", "Inherita
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_LabTests", "Inheritance_LabTests\Inheritance_LabTests.csproj", "{97962594-72F3-4FEA-8BC7-5955EE74C483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafariParkApp", "SafariParkApp\SafariParkApp.csproj", "{248D02E2-0696-45BF-8E4C-C102CDA6E899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectComparison_Collections", "ObjectComparison_Collections\ObjectComparison_Collections.csproj", "{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafariParkApp_Test", "SafariParkApp_Test\SafariParkApp_Test.csproj", "{88A730DD-0D44-4C6D-8B34-674865B11496}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator", "StringCalculator\StringCalculator.csproj", "{C3C0E9DE-B31F-4538-A8EA-D759FA56E060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectComparison_Collections", "ObjectComparison_Collections\ObjectComparison_Collections.csproj", "{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorTest", "StringCalculatorTest\StringCalculatorTest.csproj", "{A70AA4DA-A5F7-4F64-A679-97055E624C69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,18 +39,18 @@ Global
 		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97962594-72F3-4FEA-8BC7-5955EE74C483}.Release|Any CPU.Build.0 = Release|Any CPU
-		{248D02E2-0696-45BF-8E4C-C102CDA6E899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{248D02E2-0696-45BF-8E4C-C102CDA6E899}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{248D02E2-0696-45BF-8E4C-C102CDA6E899}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{248D02E2-0696-45BF-8E4C-C102CDA6E899}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88A730DD-0D44-4C6D-8B34-674865B11496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88A730DD-0D44-4C6D-8B34-674865B11496}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88A730DD-0D44-4C6D-8B34-674865B11496}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88A730DD-0D44-4C6D-8B34-674865B11496}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9B56D6-8118-4B70-82B0-5F0EE52F4842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C0E9DE-B31F-4538-A8EA-D759FA56E060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C0E9DE-B31F-4538-A8EA-D759FA56E060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C0E9DE-B31F-4538-A8EA-D759FA56E060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C0E9DE-B31F-4538-A8EA-D759FA56E060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70AA4DA-A5F7-4F64-A679-97055E624C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70AA4DA-A5F7-4F64-A679-97055E624C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70AA4DA-A5F7-4F64-A679-97055E624C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70AA4DA-A5F7-4F64-A679-97055E624C69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

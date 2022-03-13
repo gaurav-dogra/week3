@@ -60,7 +60,7 @@ namespace Collections_Lib
             StringBuilder sb = new();
             foreach (KeyValuePair<int, int> entry in myDictionary)
             {
-                sb.Append($"[{entry.Key}, {entry.Value}]");
+                sb.Append(entry);
             }
             return sb.ToString();
         }
@@ -68,15 +68,12 @@ namespace Collections_Lib
         private static Dictionary<int, int> GetDigitsAndCountFromString(string input)
         {
             Dictionary<int, int> myDictionary = new();
-            Regex regex = new("\\d");
 
             foreach (char c in input)
             {
-                string charAsStr = c.ToString();
-
-                if (regex.IsMatch(charAsStr))
+                if (Char.IsDigit(c))
                 {
-                    int n = int.Parse(charAsStr);
+                    int n = char.Parse(c);
 
                     if (myDictionary.ContainsKey(n))
                         myDictionary[n] = ++myDictionary[n];

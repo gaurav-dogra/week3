@@ -8,7 +8,7 @@ public class Tests
     [Test]
     public void WhenADefaultVehicleMovesTwiceItsPositionIs20()
     {
-        Vehicle v = new Vehicle();
+        Vehicle v = new();
         var result = v.Move(2);
         Assert.AreEqual(20, v.Position);
         Assert.AreEqual("Moving along 2 times", result);
@@ -17,7 +17,7 @@ public class Tests
     [Test]
     public void WhenAVehicleWithSpeed40IsMovedOnceItsPositionIs40()
     {
-        Vehicle v = new Vehicle(5, 40);
+        Vehicle v = new(5, 40);
         var result = v.Move();
         Assert.AreEqual(40, v.Position);
         Assert.AreEqual("Moving along", result);
@@ -26,7 +26,7 @@ public class Tests
     [Test]
     public void WhenAVehicleMovedTwiceItsPositionIs20()
     {
-        Vehicle v = new Vehicle();
+        Vehicle v = new();
         v.Move();
         v.Move();
         Assert.AreEqual(20, v.Position);
@@ -58,7 +58,7 @@ public class Tests
     [Test]
     public void ToString_Test()
     {
-        Vehicle vehicle = new Vehicle(200) { Speed = 100 };
+        Vehicle vehicle = new(200) { Speed = 100 };
         vehicle.Move(3);
         vehicle.NumPassengers = 150;
         string expected = "Week3.Vehicle capacity: 200 passengers: 150 speed: 100 position: 300";
